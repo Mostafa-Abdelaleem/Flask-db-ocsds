@@ -4,7 +4,7 @@ from flask import Flask
 app = Flask(__name__)
 
 
-conn=ibm_db.connect( os.environ['dbcred'], "", "")
+conn=ibm_db.connect( str(os.environ['dbcred']), "", "")
 
 
 @app.route("/")
