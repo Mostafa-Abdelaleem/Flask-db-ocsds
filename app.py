@@ -4,9 +4,6 @@ from flask import Flask
 app = Flask(__name__)
 
 
-conn=ibm_db.connect(str(os.environ['dbcred']), "", "")
-
-
 @app.route("/")
 def main():
     return "Flask app is online!"
